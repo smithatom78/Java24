@@ -1,31 +1,24 @@
-package module1;
-import java.util.Scanner; 
+package m1;
+import java.util.*;
 public class Frequency {
-public static void main(String[] args)
-{ String str;
-char a;
-Scanner sc=new Scanner(System.in);
-System.out.println("Please enter the string:"); 
-str=sc.nextLine();
-System.out.println("Please enter the character to search");
-a=sc.next().charAt(0);
- char aCopy=Character.toLowerCase(a); 
- int f=0;
-String strCopy=str; 
-str=strCopy.toLowerCase(); 
-for (int i=0;i<str.length();i++)
-{
-if (a==str.charAt(i)) 
-{
+	public static void main(String[] args) {
+			
+			Scanner sc=new Scanner(System.in);
+			String s1;
+			int count=0;
+			System.out.println("Enter the string:");
+			s1=sc.nextLine();
+			char ch;
+			System.out.println("Enter the character:");
+			ch=sc.next().charAt(0);	
+			for(int i=0;i<s1.length();i++)
+			{
+				if(ch==s1.charAt(i))
+					count++;
+			}
+			System.out.println("No.of occurence:"+count);	
+		}
 
-++f;
+	}	// TODO Auto-generated method stub
 
-}
-
-}
-
-System.out.println("The frequency of a given character:"+a+" in the string "+strCopy+" is: "+f);
-
-}
-
-}
+	

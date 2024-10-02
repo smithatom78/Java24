@@ -1,35 +1,30 @@
-package module1;
+package m1;
 import java.util.Scanner;
-//class
-class Box{
-	double height;
-	double depth;
-	double width;
-Box(double height, double depth, double width) {
-	this.height =height;
-	this.width =width;
-	this.depth = depth;
-}
-	public double calculateVolume() {
-		double volume = height*depth*width;
-		return volume;
+class Box1 
+{
+int w,d,h;
+int volume(int w,int d,int h) 
+	{
+	this.w=w;
+	d=d;
+	h=h;
+	System.out.println("w="+w+",d="+d+",h="+h);
+	return(w*d*h);
 	}
 }
-//This class declares an object of type Box.
-class BoxDemo1 {
-	public static void main(String args[]) {
-		System.out.println("Please enter the height, width and depth of the box:");
+public class BoxDemo1 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Enter the height, width and depth of the box:");
 		Scanner sc = new Scanner(System.in);
-		double height = sc.nextDouble();
-		double width= sc.nextDouble();
-		double depth = sc.nextDouble();
-		Box myBox = new Box(height, width, depth);
-	//	myBox.setDimension(height, width, depth);
-		System.out.println("Height="+myBox.height);
-		System.out.println("Depth="+myBox.depth);
-		System.out.println("Width="+myBox.width);
-		double volume =myBox.calculateVolume();
-		System.out.println("Volume of the box with dimensions: "+height+"* "+depth+" *"+width+" is :"+volume);
-	
+		Box1 b1 = new Box1();	
+		int he = sc.nextInt();
+		int wi= sc.nextInt();
+		int de = sc.nextInt();
+		int vol=b1.volume(he,wi,de);
+		System.out.println("w="+b1.w+",d="+b1.d+",h="+b1.h);
+		System.out.println(vol);	
 	}
+
 }
